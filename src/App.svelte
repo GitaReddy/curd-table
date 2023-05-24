@@ -3,8 +3,8 @@
   
 	// Sample data
 	let students = [
-	  { id: 1, name: 'John Doe', age: 20 },
-	  { id: 2, name: 'Jane Smith', age: 22 }
+	  { id: 1, name: 'Abraham', age: 20 },
+	  { id: 2, name: 'Henry', age: 22 }
 	];
   
 	// Form fields
@@ -72,7 +72,7 @@
   </script>
   
   <main>
-	<h2>Student Table</h2>
+	<h2>Curd Table(Add,Delete,Update)</h2>
   
 	<table>
 	  <thead>
@@ -98,7 +98,7 @@
 	</table>
   
 	<form>
-	  <h3>{selectedStudent ? 'Edit Student' : 'Add Student'}</h3>
+	  <h3>{selectedStudent ? 'Edit Table' : 'Add Table'}</h3>
 	  <label>
 		Name:
 		<input type="text" bind:value={formName} />
@@ -111,7 +111,7 @@
 		<p>{error}</p>
 	  {/if}
 	  {#if selectedStudent}
-		<button type="button" on:click={editStudent}>Edit</button>
+		<button type="button" on:click={editStudent}>Update</button>
 	  {:else}
 		<button type="button" on:click={addStudent}>Add</button>
 	  {/if}
