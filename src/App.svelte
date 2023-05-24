@@ -98,7 +98,7 @@
 	</table>
   
 	<form>
-	  <h3>{selectedStudent ? 'Edit Table' : 'Add Table'}</h3>
+	  <h3>{selectedStudent ? 'Edit Row' : 'Add Row'}</h3>
 	  <label>
 		Name:
 		<input type="text" bind:value={formName} />
