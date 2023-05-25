@@ -74,7 +74,7 @@
   <main>
 	<h2>Curd Table(Add,Delete,Update)</h2>
   
-	<table>
+	<table class="table table-bordered">
 	  <thead>
 		<tr>
 		  <th>ID</th>
@@ -89,8 +89,8 @@
 			<td>{student.id}</td>
 			<td>{student.name}</td>
 			<td>{student.age}</td>
-			<td><button on:click={() => deleteStudent(student.id)}>Delete</button></td>
-			<td><button type="button" on:click={editStudent}>Edit</button></td>
+			<td><button class="btn btn-primary" on:click={() => deleteStudent(student.id)}>Delete</button>
+			<button type="button" class="btn btn-primary" on:click={editStudent}>Edit</button></td>
 		</tr>
 		{/each}
 	  </tbody>
@@ -111,11 +111,16 @@
 		<p>{error}</p>
 	  {/if}
 	  {#if selectedStudent}
-		<button type="button" on:click={editStudent}>Update</button>
+		<button type="button" class="btn btn-primary" on:click={editStudent}>Update</button>
 	  {:else}
-		<button type="button" on:click={addStudent}>Add</button>
+		<button type="button" class="btn btn-primary" on:click={addStudent}>Add</button>
 	  {/if}
-	  <button type="button" on:click={resetForm}>Cancel</button>
+	  <button type="button" class="btn btn-primary" on:click={resetForm}>Cancel</button>
 	</form>
   </main>
-  
+  <style>
+	.table{
+		width:50%;
+	}
+
+  </style>
